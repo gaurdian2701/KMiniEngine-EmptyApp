@@ -1,0 +1,3 @@
+[submodule "KMiniEngine"]
+	path = KMiniEngine
+	url = https://github.com/gaurdian2701/KMiniEngine.git
