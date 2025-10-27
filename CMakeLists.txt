@@ -3,7 +3,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(PROJECT_NAME Grass_Rendering)
 project(${PROJECT_NAME})
 
-add_subdirectory(vendor/KMiniEngine)
+add_subdirectory(KMiniEngine)
 
 set(SOURCE_FILE GrassRenderingAppMain.cpp)
 
