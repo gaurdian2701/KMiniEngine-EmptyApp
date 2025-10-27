@@ -7,17 +7,16 @@ public:
 	GrassRenderApp() = default;
 	~GrassRenderApp() = default;
 
-	void Run() override
-	{
-		while (true)
-		{
-		}
-	}
 };
 
 Application* CreateApplication()
 {
 	return new GrassRenderApp();
+}
+
+void UpdateApplication()
+{
+
 }
 
 int main()
