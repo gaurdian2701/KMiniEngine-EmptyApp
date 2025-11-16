@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "KMiniEngine.h"
-#include "Core/Scene.h"
+#include "Core/GameScene.h"
 
 class Application;
 
