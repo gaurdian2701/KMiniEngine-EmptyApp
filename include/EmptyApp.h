@@ -15,6 +15,9 @@ public:
     void End();
 
     Core::GameScene* m_MainScene = nullptr;
+
+private:
+    Scene::GameObject* m_gameObject1 = nullptr;
 };
 
 static EmptyApp& GetApplicationInstance()

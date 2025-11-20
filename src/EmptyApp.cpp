@@ -1,32 +1,29 @@
 ﻿#include "EmptyApp.h"
-#include "Core/ECS/Components/Rigidbody.h"
-#include "Core/ECS/Components/Transform.h"
+#include "../KMiniEngine/include/Assets/Components/Rigidbody.h"
+#include "../KMiniEngine/include/Assets/Components/Transform.h"
 #include "Scene/GameObject.h"
 
 void EmptyApp::Begin()
 {
     m_MainScene = new Core::GameScene(100);
 
-    Scene::GameObject* gameObject1 = m_MainScene->CreateGameObject();
+    m_gameObject1 = m_MainScene->CreateGameObject();
     Scene::GameObject* gameObject2 = m_MainScene->CreateGameObject();
     Scene::GameObject* gameObject3 = m_MainScene->CreateGameObject();
 
-    gameObject1->AddComponent<Core::ECS::Components::Transform>();
-    gameObject1->AddComponent<Core::ECS::Components::Rigidbody>();
-    gameObject2->AddComponent<Core::ECS::Components::Transform>();
-    gameObject3->AddComponent<Core::ECS::Components::Rigidbody>();
-    gameObject3->AddComponent<Core::ECS::Components::Transform>();
+    m_gameObject1->AddComponent<Assets::Components::Transform>();
+    m_gameObject1->AddComponent<Assets::Components::Rigidbody>();
 
-    auto& array = m_MainScene->GetECSManager().GetSmallestEntityArray<Core::ECS::Components::Transform>();
+    gameObject2->AddComponent<Assets::Components::Transform>();
 
-    gameObject1->RemoveComponent<Core::ECS::Components::Transform>();
-
-    delete gameObject1;
+    gameObject3->AddComponent<Assets::Components::Rigidbody>();
+    gameObject3->AddComponent<Assets::Components::Transform>();
 }
 
 void EmptyApp::Update()
 {
-
+    m_MainScene->Update(0.0f);
+    Assets::Components::Transform& t = m_gameObject1->GetComponent<Assets::Components::Transform>();
 }
 
 void EmptyApp::End()
