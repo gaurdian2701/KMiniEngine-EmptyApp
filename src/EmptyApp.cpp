@@ -24,6 +24,7 @@ void EmptyApp::Update()
 {
     m_MainScene->Update(0.0f);
     Assets::Components::Transform& t = m_gameObject1->GetComponent<Assets::Components::Transform>();
+    std::cout << t.PositionVector.x << "\n" << std::flush;
 }
 
 void EmptyApp::End()
