@@ -11,7 +11,7 @@ public:
     ~EmptyApp() = default;
 
     void Begin();
-    void Update();
+    void Update(const float deltaTime);
     void End();
 
     Core::GameScene* m_MainScene = nullptr;
@@ -36,9 +36,9 @@ inline void BeginApplication()
     GetApplicationInstance().Begin();
 }
 
-inline void UpdateApplication()
+inline void UpdateApplication(const float deltaTime)
 {
-    GetApplicationInstance().Update();
+    GetApplicationInstance().Update(deltaTime);
 }
 
 inline void EndApplication()

@@ -20,11 +20,11 @@ void EmptyApp::Begin()
     gameObject3->AddComponent<Assets::Components::Transform>();
 }
 
-void EmptyApp::Update()
+void EmptyApp::Update(const float deltaTime)
 {
-    m_MainScene->Update(0.0f);
-    Assets::Components::Transform& t = m_gameObject1->GetComponent<Assets::Components::Transform>();
-    std::cout << t.PositionVector.x << "\n" << std::flush;
+    m_MainScene->Update(deltaTime);
+    std::cout << deltaTime << "\n" << std::flush;
+    auto& t = m_gameObject1->GetComponent<Assets::Components::Transform>();
 }
 
 void EmptyApp::End()
