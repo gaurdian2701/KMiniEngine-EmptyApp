@@ -1,5 +1,4 @@
 ﻿#include "EmptyApp.h"
-#include "../KMiniEngine/include/Assets/Components/Rigidbody.h"
 #include "../KMiniEngine/include/Assets/Components/Transform.h"
 #include "Scene/GameObject.h"
 
@@ -12,11 +11,9 @@ void EmptyApp::Begin()
     Scene::GameObject* gameObject3 = m_MainScene->CreateGameObject();
 
     m_gameObject1->AddComponent<Assets::Components::Transform>();
-    m_gameObject1->AddComponent<Assets::Components::Rigidbody>();
 
     gameObject2->AddComponent<Assets::Components::Transform>();
 
-    gameObject3->AddComponent<Assets::Components::Rigidbody>();
     gameObject3->AddComponent<Assets::Components::Transform>();
 }
 
